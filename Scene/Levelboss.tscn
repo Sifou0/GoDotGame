@@ -858,15 +858,11 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 6/z_index = 0
 
-<<<<<<< HEAD
 [sub_resource type="CircleShape2D" id=80]
-radius = 35.3553
+radius = 29.1548
 
-[node name="Levelboss" type="Node2D"]
-=======
 [node name="LevelbossN" type="Node2D"]
->>>>>>> e387caf435256acd099690a5ce1476e44b199050
-position = Vector2( -8, 0 )
+position = Vector2( -6, 0 )
 script = ExtResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -901,31 +897,26 @@ position = Vector2( 1, -2 )
 [node name="enemy" parent="enemies" instance=ExtResource( 4 )]
 position = Vector2( 73, 46 )
 
-[node name="enemy2" parent="enemies" instance=ExtResource( 4 )]
-<<<<<<< HEAD
-position = Vector2( 1030, 44 )
-
 [node name="enemy3" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 1020, 298 )
+position = Vector2( 1035, 310 )
 
 [node name="enemy4" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 442, 411 )
+position = Vector2( 269, 421 )
 
 [node name="enemy5" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 854, 406 )
+position = Vector2( 900, 417 )
 
 [node name="enemy6" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 398, 284 )
+position = Vector2( 654, 231 )
+
+[node name="enemy2" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 391, 275 )
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 959, 413 )
+position = Vector2( 958, 407 )
 shape = SubResource( 80 )
 
-[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_Area2D_area_exited"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
-=======
-position = Vector2( 391, 275 )
->>>>>>> e387caf435256acd099690a5ce1476e44b199050
