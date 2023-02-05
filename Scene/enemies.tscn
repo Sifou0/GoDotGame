@@ -2,7 +2,8 @@
 
 [ext_resource path="res://art/enemies/PlayerRun.png" type="Texture" id=1]
 [ext_resource path="res://art/enemies/PlayerRun2.png" type="Texture" id=2]
-[ext_resource path="res://enemies.gd" type="Script" id=3]
+[ext_resource path="res://maj/enemies.gd" type="Script" id=3]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11, 17 )
