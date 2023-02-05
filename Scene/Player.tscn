@@ -44,3 +44,4 @@ frames = SubResource( 17 )
 animation = "stay"
 
 [node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 11, 0 )
