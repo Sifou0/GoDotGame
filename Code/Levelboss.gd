@@ -16,4 +16,4 @@ func set_score(val):
 
 func set_hp(val):
 	my_hp = val
-	get_node("HUD/enemies_lft").set_text("Enemies left : "+ str(enemies_left))
+	get_node("HUD/my_hp").set_text("HP : "+ str(my_hp))
