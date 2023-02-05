@@ -13,3 +13,12 @@ position = Vector2( -18, -16 )
 [node name="Player" parent="Levelboss" instance=ExtResource( 1 )]
 position = Vector2( 47, 376 )
 scale = Vector2( 1, 1 )
+
+[node name="HUD" type="CanvasLayer" parent="Levelboss"]
+
+[node name="enemies_lft" type="Label" parent="Levelboss/HUD"]
+margin_left = 322.0
+margin_top = 2.0
+margin_right = 427.0
+margin_bottom = 31.0
+text = "Enemies left: 6"

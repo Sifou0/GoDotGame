@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Code/HUD.gd" type="Script" id=1]
+
+[node name="HUD" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Display" type="CanvasLayer" parent="."]
+
+[node name="enemies_lft" type="Label" parent="Display"]
+margin_left = 20.0
+margin_top = 30.0
+margin_right = 162.0
+margin_bottom = 59.0
+text = "Enemies left: 6"

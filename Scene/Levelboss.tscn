@@ -891,7 +891,19 @@ position = Vector2( 1, -2 )
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="enemy" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 73, 46 )
+position = Vector2( 81, 54 )
 
 [node name="enemy2" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 391, 275 )
+position = Vector2( 1030, 44 )
+
+[node name="enemy3" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 1020, 298 )
+
+[node name="enemy4" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 442, 411 )
+
+[node name="enemy5" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 854, 406 )
+
+[node name="enemy6" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 398, 284 )
