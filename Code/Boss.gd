@@ -1,6 +1,9 @@
-extends Node2D
+extends Node
 
-var enemies_left
 
+func _ready():
+	pass
+"""
 func _process(delta):
 	enemies_left = get_tree().get_nodes_in_group("Enemies").size()
+"""

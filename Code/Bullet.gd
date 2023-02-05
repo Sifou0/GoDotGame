@@ -18,6 +18,12 @@ func _physics_process(delta):
 func setDir(bdir):
 	dir = bdir
 
+func setIsBoss():
+	lifetime = 2
+
+func setIsEnemies():
+	lifetime = 0.5
+
 func selfDestruct():
 	yield(get_tree().create_timer(lifetime),"timeout")
 	queue_free()
@@ -25,8 +31,6 @@ func selfDestruct():
 
 func _on_Bullet_body_entered(body):
 	get_node("CollisionShape2D").set_deferred("disabled",true)
-	if body.is_in_group("Enemies"):
+	if body.is_in_group("Enemies") or body.is_in_group("Boss") or body.is_in_group("Player"):
 		body.takeDmg(damage)
 	self.hide()
-
-

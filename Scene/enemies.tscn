@@ -27,9 +27,13 @@ position = Vector2( -1, 0 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
 animation = "walk"
+frame = 1
 playing = true
 
 [node name="floor_checker" type="RayCast2D" parent="."]
 position = Vector2( 10, 5 )
 enabled = true
 cast_to = Vector2( 0, 20 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 22, 0 )

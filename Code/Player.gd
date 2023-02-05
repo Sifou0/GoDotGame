@@ -12,12 +12,25 @@ const GRAVITY = 30
 const JUMPFORCE = -750
 var HP = 10
 var screen_size
+var isBoss = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	if get_parent().name == "Levelboss":
+		$Camera2D.zoom = Vector2(0.5,0.5)
+	else:
+		$Camera2D.zoom = Vector2(1,1)
+		$Camera2D.limit_left = 0
+		$Camera2D.limit_right = 720
+		isBoss = true
 
 func takeDmg(dmg):
 	HP -= dmg
+	if HP <= 0:
+		onDeath()
+
+func onDeath():
+	queue_free()
 
 func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
@@ -32,7 +45,13 @@ func _physics_process(delta):
 		$Position2D.position.x = -20
 	elif Input.is_action_just_pressed("shoot"):
 		b = bullet.instance()
-		b.setDir(bDir)
+		if isBoss:
+			b.setDir(-PI/2)
+			b.setIsBoss()
+			$Position2D.position.x = 0
+			$Position2D.position.y = -20
+		else:
+			b.setDir(bDir)
 		get_parent().add_child(b)
 		b.global_position = $Position2D.global_position
 	else:
