@@ -9,7 +9,8 @@ export var bDir = 0
 var velocity = Vector2(0,0)
 const SPEED = 180
 const GRAVITY = 30
-const JUMPFORCE = -900
+const JUMPFORCE = -750
+var HP = 10
 var screen_size
 
 func _ready():
@@ -21,10 +22,12 @@ func _physics_process(delta):
 		velocity.x = SPEED
 		bDir = 0
 		$AnimatedSprite.play("walk")
+		$Position2D.position.x = 11
 	elif Input.is_action_pressed("move_left"):
 		velocity.x = -SPEED
 		bDir = 1
 		$AnimatedSprite.play("walk")
+		$Position2D.position.x = -11
 	elif Input.is_action_just_pressed("shoot"):
 		b = bullet.instance()
 		b.setDir(bDir)
