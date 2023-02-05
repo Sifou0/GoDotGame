@@ -54,3 +54,16 @@ position = Vector2( 11, 0 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 0.666664 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = -10
+limit_top = -10
+limit_right = 1164
+limit_bottom = 478
+limit_smoothed = true
+__meta__ = {
+"_edit_group_": true
+}
