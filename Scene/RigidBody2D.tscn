@@ -6,7 +6,8 @@
 [ext_resource path="res://art/enemyWalking_2.png" type="Texture" id=4]
 [ext_resource path="res://art/enemySwimming_2.png" type="Texture" id=5]
 [ext_resource path="res://art/enemyFlyingAlt_1.png" type="Texture" id=6]
-[ext_resource path="res://RigidBody2D.gd" type="Script" id=7]
+[ext_resource path="res://Code/RigidBody2D.gd" type="Script" id=7]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

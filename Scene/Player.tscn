@@ -38,10 +38,19 @@ __meta__ = {
 position = Vector2( 0, -1.90735e-06 )
 scale = Vector2( 3, 3 )
 shape = SubResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 17 )
 animation = "stay"
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 11, 0 )
+__meta__ = {
+"_edit_group_": true
+}

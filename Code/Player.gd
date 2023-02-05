@@ -16,6 +16,8 @@ var screen_size
 func _ready():
 	screen_size = get_viewport_rect().size
 
+func takeDmg(dmg):
+	HP -= dmg
 
 func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
@@ -25,7 +27,7 @@ func _physics_process(delta):
 		$Position2D.position.x = 11
 	elif Input.is_action_pressed("move_left"):
 		velocity.x = -SPEED
-		bDir = 1
+		bDir = PI
 		$AnimatedSprite.play("walk")
 		$Position2D.position.x = -11
 	elif Input.is_action_just_pressed("shoot"):

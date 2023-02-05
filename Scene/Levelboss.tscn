@@ -859,8 +859,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="Levelboss" type="Node2D"]
 position = Vector2( -8, 0 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 7.0
 margin_top = 2.0
