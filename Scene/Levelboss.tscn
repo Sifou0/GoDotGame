@@ -1,9 +1,10 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Code/Levelboss.gd" type="Script" id=1]
 [ext_resource path="res://Img/background_gris.png" type="Texture" id=2]
 [ext_resource path="res://Scene/TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/enemies.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Code/Area2D.gd" type="Script" id=5]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -857,7 +858,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 6/z_index = 0
 
+<<<<<<< HEAD
+[sub_resource type="CircleShape2D" id=80]
+radius = 35.3553
+
+[node name="Levelboss" type="Node2D"]
+=======
 [node name="LevelbossN" type="Node2D"]
+>>>>>>> e387caf435256acd099690a5ce1476e44b199050
 position = Vector2( -8, 0 )
 script = ExtResource( 1 )
 
@@ -894,4 +902,30 @@ position = Vector2( 1, -2 )
 position = Vector2( 73, 46 )
 
 [node name="enemy2" parent="enemies" instance=ExtResource( 4 )]
+<<<<<<< HEAD
+position = Vector2( 1030, 44 )
+
+[node name="enemy3" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 1020, 298 )
+
+[node name="enemy4" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 442, 411 )
+
+[node name="enemy5" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 854, 406 )
+
+[node name="enemy6" parent="enemies" instance=ExtResource( 4 )]
+position = Vector2( 398, 284 )
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 959, 413 )
+shape = SubResource( 80 )
+
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+=======
 position = Vector2( 391, 275 )
+>>>>>>> e387caf435256acd099690a5ce1476e44b199050
