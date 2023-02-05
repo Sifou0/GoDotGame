@@ -24,12 +24,12 @@ func _physics_process(delta):
 		velocity.x = SPEED
 		bDir = 0
 		$AnimatedSprite.play("walk")
-		$Position2D.position.x = 11
+		$Position2D.position.x = 20
 	elif Input.is_action_pressed("move_left"):
 		velocity.x = -SPEED
 		bDir = PI
 		$AnimatedSprite.play("walk")
-		$Position2D.position.x = -11
+		$Position2D.position.x = -20
 	elif Input.is_action_just_pressed("shoot"):
 		b = bullet.instance()
 		b.setDir(bDir)

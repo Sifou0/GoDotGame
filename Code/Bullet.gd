@@ -24,7 +24,9 @@ func selfDestruct():
 
 
 func _on_Bullet_body_entered(body):
-	print("hit")
+	get_node("CollisionShape2D").set_deferred("disabled",true)
+	if body.is_in_group("Enemies"):
+		body.takeDmg(damage)
 	self.hide()
 
 
